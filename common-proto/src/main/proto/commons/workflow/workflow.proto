@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "dataflow.commons";
+option java_outer_classname = "WorkflowProto";
+
+enum WorkflowExecutionStateGrpcEnum {
+  WEST_INITIAL = 0;
+  WEST_SYSTEM_ERROR = 1;
+  WEST_NODES_ERROR = 2;
+  WEST_ABORTED = 3;
+  WEST_SUCCESS = 4;
+  WEST_PARTIAL_SUCCESS = 5;
+}
+
+enum WorkflowExecutionStatusGrpcEnum {
+  WESS_IDLE = 0;
+  WESS_LAUNCHING = 1;
+  WESS_EXECUTING = 2;
+  WESS_FINISHING = 3;
+  WESS_ABORTING = 4;
+}

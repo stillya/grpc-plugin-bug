@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "dataflow.commons";
+option java_outer_classname = "PermissionServiceProto";
+
+package authservice;
+
+import "auth/permission.proto";
+
+service PermissionService {
+  rpc getPermissionByName(PermissionServiceGetPermissionByNameRequest) returns (PermissionServiceGetPermissionByNameResponse) {}
+}
+
+message PermissionServiceGetPermissionByNameRequest {
+  string name = 1;
+}
+
+message PermissionServiceGetPermissionByNameResponse {
+  PermissionGrpc permission = 2;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "dataflow.commons";
+option java_outer_classname = "Permission";
+
+message PermissionGrpc {
+  string name = 1;
+  string description = 2;
+  repeated string roles = 3;
+}
